@@ -40,12 +40,6 @@ class WBParse:
                                 #print(f"https://www.wildberries.ru/catalog/{jacket['item_id']}/detail.aspx")
                                 break
         return result
-            #if feedback['updatedDate']:
-            #    print(f"Оценка: {feedback['productValuation']}\nТекст:{feedback['text']}\n"
-            #          f"Дата добавления:{feedback['createdDate'][:10]}\nДата обновления:{feedback['updatedDate'][:10]}")
-            #else:
-            #    print(f"Оценка: {feedback['productValuation']}\nТекст:{feedback['text']}\nДата добавления:{feedback['createdDate'][:10]}")
-            #return
 
     def get_pages(self):
         page_count = 0
@@ -120,14 +114,3 @@ if __name__ == '__main__':
     wbp.main()
     print(datetime.now())
 
-#url для того чтобы узнать id страницы с отзывами https://basket-01.wb.ru/vol71/part7157/7157367/info/ru/card.json, метод гет
-
-#url страницы с отзывами https://feedbacks1.wb.ru/feedbacks/v1/5534016, метод пост
-
-#url самой страницы https://www.wildberries.ru/webapi/brands/data/tvoe/futbolki---topy?sort=rate&page= + номер страницы, метод пост
-
-#url для курток f"https://catalog.wb.ru/sellers/catalog?appType=1&couponsGeo=2,7,3,6,19,21,8&curr=rub&dest=-2227607&emp=0&lang=ru&locale=ru&page={page_number}&pricemarginCoeff=1.0&reg=1&regions=80,64,83,4,38,33,70,68,69,86,30,40,48,1,22,66,31&sort=rate&spp=25&sppFixGeo=4&subject=168&supplier=5359"
-
-#одна куртка https://basket-09.wb.ru/vol1260/part126000/126000336/info/ru/card.json, нужны imt_id и nm_id
-
-#отзывы для курток https://feedbacks2.wb.ru/feedbacks/v1/ + номер, который отличается от id (imt_id)
