@@ -18,9 +18,9 @@ async def main():
             req2 = await client.get_historical_klines(symbol='XRPUSDT', interval='1h', limit=1)
             max_cost = float(req2[0][2])  # Для получения максимума за час
             cost_difference = (max_cost - actual_cost) / actual_cost * 100
-            if cost_difference == 1:
+            if cost_difference >= 1:
                 print(f"Цена упала на 1%.\nМаксимальная цена за последний час: {max_cost}\nТекущая цена: {actual_cost}")
-            #print(f"Текущая стоимость: {actual_cost}, максимальная стоимость: {max_cost}, Разница: {cost_difference}")
+            print(f"Текущая стоимость: {actual_cost}, максимальная стоимость: {max_cost}, Разница: {cost_difference}%")
     await client.close_connection()
 
 
