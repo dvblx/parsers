@@ -56,9 +56,6 @@ class StroiParse:
             json.dump(cats_and_subcats, file, indent=4, ensure_ascii=False)
         return cats_and_subcats
 
-    def category_overrun(self, categories_dict: dict, session):
-        pass
-
     async def get_one_category_goods_site1(self, categories_dict: dict, session):
         result = []
         lst = list(categories_dict.keys())
